@@ -16,4 +16,13 @@
     @yield('content')
     {{View::make('footer')}}
 </body>
+
+<style>
+    .formlogin{
+        height: 500px;
+        padding-top:100px;
+
+    }
+
+</style>
 </html>
