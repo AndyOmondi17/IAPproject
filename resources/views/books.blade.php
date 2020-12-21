@@ -37,14 +37,24 @@
             </div>
 
             <div class="trending-wrapper">
-            <centre><H3>TRENDING BOOKS</H3></centre>
+            <centre><H3>AVAILABLE BOOKS</H3></centre>
                 @foreach ($products as $item)
+
+          
                 <div class="trending-item"> 
-                <img class="trending-img" src="{{$item['gallery']}}" alt="Omosh">
+                    <div class="card" style="width: 18rem;">
+                    <img class="card-img-top trending-img" src="{{$item['gallery']}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$item['name']}}</h5>
+                        <p class="card-text">{{$item['description']}}</p>
+                        <a href="detail/{{$item['id']}}" class="btn btn-primary">{{$item['name']}}</a>
+                    </div>
+                    </div>
+                <!-- <img class="trending-img" src="{{$item['gallery']}}" alt="Omosh">
                 <a href="detail/{{$item['id']}}">
                 <div class="">
                     <h6>{{$item['name']}}</h6>    
-                </div>
+                </div> -->
                 </div>
 
                 @endforeach
